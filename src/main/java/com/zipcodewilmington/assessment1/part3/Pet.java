@@ -56,6 +56,10 @@ public abstract class Pet implements Animal {
         return age;
     }
 
+    public void setAge(int newValue) {
+        this.age = newValue;
+    }
+
     /**
      * @param newPetOwner the new owner of this pet
      * ensure this instance of `Pet` is added to the owner's composite `pets` list
