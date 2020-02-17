@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import java.util.Arrays;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -11,7 +13,13 @@ public class ArrayUtils {
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
+        Integer counter = 0;
+        for (Object element : objectArray) {
+            if (element.equals(objectToCount)) {
+                counter++;
+            }
+        }
+        return counter;
     }
 
     /**
@@ -23,6 +31,21 @@ public class ArrayUtils {
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
         return null;
     }
+        /*Object[] newArray = new Object[objectArray.length];
+        int inputIndex = 0;
+        int outputLength = 0;
+        while (inputIndex < objectArray.length) {
+            if (objectArray[inputIndex].equals(objectToRemove)) {
+                inputIndex++;
+            } else {
+                newArray[outputLength] = objectArray[inputIndex];
+                inputIndex++;
+                outputLength++;
+            }
+        }
+        Object[] toRet = Arrays.copyOfRange(newArray, 0, outputLength);
+        return toRet;
+    }*/
 
     /**
      * @param objectArray an array of any type of Object
