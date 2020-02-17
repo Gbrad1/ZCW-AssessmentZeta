@@ -1,6 +1,7 @@
 package com.zipcodewilmington.assessment1.part2;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by leon on 2/16/18.
@@ -29,9 +30,7 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        return null;
-    }
-        /*Object[] newArray = new Object[objectArray.length];
+        Object[] newArray = new Object[objectArray.length];
         int inputIndex = 0;
         int outputLength = 0;
         while (inputIndex < objectArray.length) {
@@ -45,7 +44,7 @@ public class ArrayUtils {
         }
         Object[] toRet = Arrays.copyOfRange(newArray, 0, outputLength);
         return toRet;
-    }*/
+    }
 
     /**
      * @param objectArray an array of any type of Object
@@ -53,6 +52,8 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
+        //List<Object> list = Arrays.asList(objectArray);
+
         return null;
     }
 
