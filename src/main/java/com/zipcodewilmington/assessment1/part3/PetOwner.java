@@ -1,6 +1,7 @@
 package com.zipcodewilmington.assessment1.part3;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by leon on 2/16/18.
@@ -15,7 +16,6 @@ public class PetOwner {
      */
     public PetOwner(String name, Pet... pets) {
         this.name = name;
-        //this.pet = pets;
     }
 
     /**
@@ -72,7 +72,7 @@ public class PetOwner {
      * @return the number of Pet objects stored in this class
      */
     public Integer getNumberOfPets() {
-        return null;
+        return list.size();
     }
 
     /**

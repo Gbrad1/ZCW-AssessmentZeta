@@ -20,6 +20,7 @@ public class Cat extends Pet {
      */
     public Cat(Integer age) {
         this.age = age;
+        this.name = "Cat name";
     }
 
     /**
@@ -27,6 +28,7 @@ public class Cat extends Pet {
      */
     public Cat(String name) {
         this.name = name;
+        this.age = 0;
     }
 
     /**
@@ -46,7 +48,7 @@ public class Cat extends Pet {
     public String speak() {
         return "Meow";
     }
-//Might not need the below.
+
     public void setName(String newValue) {
         this.name = newValue;
     }
