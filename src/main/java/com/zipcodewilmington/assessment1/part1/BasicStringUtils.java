@@ -1,5 +1,8 @@
 package com.zipcodewilmington.assessment1.part1;
 
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+import org.w3c.dom.ls.LSOutput;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -58,7 +61,8 @@ public class BasicStringUtils {
      * @return string with identical contents excluding first and last character
      */
     public static String removeFirstAndLastCharacter(String str) {
-        return null;
+        String withoutFirstLetterAndLastLetter = str.substring(1, str.length() - 1);
+        return withoutFirstLetterAndLastLetter;
     }
 
     /**
