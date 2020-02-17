@@ -37,7 +37,10 @@ public class PetOwner {
      * @return true if I own this pet
      */
     public Boolean isOwnerOf(Pet pet) {
-        return null;
+        if (list.contains(pet)) {
+            return true;
+        } else
+            return false;
     }
 
     /**
@@ -76,7 +79,7 @@ public class PetOwner {
      * @return the name property of the Pet
      */
     public String getName() {
-        return null;
+        return name;
     }
 
     /**

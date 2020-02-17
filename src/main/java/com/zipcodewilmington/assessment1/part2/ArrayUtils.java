@@ -30,14 +30,14 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        Object[] newArray = new Object[objectArray.length];
+        Integer[] newArray = new Integer[objectArray.length];
         int inputIndex = 0;
         int outputLength = 0;
         while (inputIndex < objectArray.length) {
             if (objectArray[inputIndex].equals(objectToRemove)) {
                 inputIndex++;
             } else {
-                newArray[outputLength] = objectArray[inputIndex];
+                newArray[outputLength] = (Integer)objectArray[inputIndex];
                 inputIndex++;
                 outputLength++;
             }
@@ -52,8 +52,20 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
-        //List<Object> list = Arrays.asList(objectArray);
+        /*Arrays.sort(objectArray);
+        int counter = 0;
+        Object currentMost = objectArray[0];
+        Object temporary = 0;
 
+        for (int i = 0; i < (objectArray.length - 1); i++) {
+            temporary = objectArray[i];
+            temporary = 0;
+            for (int j = 1; j < objectArray.length; j++) {
+                if (temporary == objectArray[j])
+                    temporary++;
+            }
+        }
+*/
         return null;
     }
 
