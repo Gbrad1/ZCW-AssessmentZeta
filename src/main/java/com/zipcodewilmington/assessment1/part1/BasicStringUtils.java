@@ -9,7 +9,9 @@ public class BasicStringUtils {
      * @return string with identical content, and the first character capitalized
      */
     public static String camelCase(String str) {
-        return null;
+        String upperCase = str.substring(0, 1).toUpperCase();
+        String toRet = upperCase + str.substring(1);
+        return toRet;
     }
 
     /**
@@ -17,7 +19,26 @@ public class BasicStringUtils {
      * @return string with identical contents, in the reverse order
      */
     public static String reverse(String str) {
-        return null;
+        //We created a new array of type char to put each letter from the str provided in the paremeter.
+        char[] reversedString = str.toCharArray();
+        //index and end created to control the while loop.
+        int index = 0;
+        int end = reversedString.length - 1;
+        //temporary does what it states. I am storing the current character here to move
+        //to a new string.
+        char temporary;
+        //using sout to check the reversedString
+        System.out.println(reversedString);
+        while (end > index) {
+            //temporary holds the
+            temporary = reversedString[index];
+            //setting the last index of reversedString to the first position of our new array.
+            reversedString[index] = reversedString[end];
+            //sets the index of end to temporary or a character in this case.
+            reversedString[end] = temporary;
+            end--;
+            index++;
+        } return new String(reversedString);
     }
 
     /**
@@ -25,7 +46,10 @@ public class BasicStringUtils {
      * @return string with identical contents, in reverse order, with first character capitalized
      */
     public static String reverseThenCamelCase(String str) {
-        return null;
+        String reversedString = reverse(str);
+        String firstCapitalLetter = reversedString.substring(0,1).toUpperCase();
+        String finalString = firstCapitalLetter + reversedString.substring(1);
+        return finalString;
     }
 
 
