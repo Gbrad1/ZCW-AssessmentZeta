@@ -6,7 +6,7 @@ package com.zipcodewilmington.assessment1.part3;
 public class Dog extends Pet {
     String name;
     Integer age;
-    PetOwner petOwner;
+    PetOwner owner;
     /**
      * @param name name of this Dog
      * @param age age of this dog
@@ -67,7 +67,7 @@ public class Dog extends Pet {
     }
 
     public void setPetOwner(PetOwner newPetOwner) {
-        this.petOwner = newPetOwner;
+        this.owner = newPetOwner;
     }
 
     /*public PetOwner getOwner() {

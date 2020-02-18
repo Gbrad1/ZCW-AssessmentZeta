@@ -9,7 +9,7 @@ import java.util.Collections;
 public class PetOwner {
     private ArrayList<Pet> list = new ArrayList<>();
     String name;
-    Pet pet;
+
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
