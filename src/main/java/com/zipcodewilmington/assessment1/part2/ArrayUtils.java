@@ -53,23 +53,25 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
-        /*Arrays.sort(objectArray);
-        int counter = 0;
-        Object currentMost = objectArray[0];
-        Object temporary = 0;
-
-        for (int i = 0; i < (objectArray.length - 1); i++) {
-            temporary = objectArray[i];
-            temporary = 0;
-            for (int j = 1; j < objectArray.length; j++) {
-                if (temporary == objectArray[j])
-                    temporary++;
+        Arrays.sort(objectArray);
+        int occ = 0;
+        int count = 0;
+        int mostPopular = 0;
+        for (int i = 0; i < objectArray.length; i++) {
+            occ = 0;
+            for (int j = 0; j < objectArray.length; j++) {
+                if (objectArray[i].equals(objectArray[j])) {
+                    occ++;
+                }
+            }
+            if (count < occ) {
+                mostPopular = (int)objectArray[i];
+                count = occ;
             }
         }
-*/
-        return null;
+        System.out.println(count);
+        return mostPopular;
     }
-
 
     /**
      * @param objectArray an array of any type of Object
@@ -77,22 +79,24 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
     public static Object getLeastCommon(Object[] objectArray) {
-        /*Object minCount = 0;
-        int least = 0;
-
+        Arrays.sort(objectArray);
+        int occ = 0;
+        int count = 0;
+        int leastCommon = 0;
         for (int i = 0; i < objectArray.length; i++) {
-            int counter = 0;
+            occ = 0;
             for (int j = 0; j < objectArray.length; j++) {
-                if (objectArray[i] == objectArray[j]) {
-                    minCount = objectArray[i];
-                    counter++;
-                } if (minCount < counter) {
-
+                if (objectArray[i].equals(objectArray[j])) {
+                    occ++;
                 }
             }
+            if (count > occ || i == 0) {
+                leastCommon = (int)objectArray[i];
+                count = occ;
+            }
         }
-        System.out.println(minCount);*/
-        return null;
+        System.out.println(count);
+        return leastCommon;
     }
 
     /**
